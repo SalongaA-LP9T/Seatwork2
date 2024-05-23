@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>SW2</title>
+</head>
+<body>
+	<div class="container">
+		<img id="StarWars" src="StarWars.jpeg">
+		<h1>Hey guys, it's TONY! and today, I give you Math CHALLENGE TO COMPLETE</h1>
+		<h1>Given:</h1>
+		Enter a value for x: <input type="number" id="box1"> <br></br>
+		Enter a value for y: <input type="number" id="box2"> <br></br>
+		<h2 id="sum"></h2>
+		<h2 id="difference"></h2>
+		<h2 id="product"></h2>
+		<h2 id="quotient"></h2>
+		<button type="Submit" onclick="multiplication()">Product Of X and Y</button>
+		<button type="Submit" onclick="exponent()">X Raise to Y</button>
+		<button type="Submit" onclick="remainder()">Get the Remainder</button>		
+		<button type="Submit" onclick="equal()">Check if X is Equal to Y</button>
+	</div>
+	<style type="text/css">
+		body{
+			background-color: #1992;
+		}
+        .container{
+        	color: black;
+            border: thick dashed;
+            width: 1500px;
+            margin: 12px;
+            padding: 16px;
+            padding-bottom: 360px;
+            border-radius: 18px;
+            box-shadow: -16px 5px 27px -6px rgba(140,145,142,0.75);
+-webkit-box-shadow: -16px 5px 27px -6px rgba(140,145,142,0.75);
+-moz-box-shadow: -16px 5px 27px -6px rgba(140,145,142,0.75);
+        }
+        #Kratos{
+        	float: left;
+        }
+       h1{
+       	color: darkgoldenrod;
+       }
+       button{
+       	font-size: 25px;
+       	background-color: navajowhite;
+       }
+    </style>
+    <script type="text/javascript">
+	    function multiplication() {
+		 var num1 = document.getElementById("box1").value;
+		 var num2 = document.getElementById("box2").value;
+		 var product = Number(num1) * Number(num2);
+         window.alert("the product of x and y is " + product);
+
+	   }
+	   function exponent() {
+		 var num1 = document.getElementById("box1").value;
+		 var num2 = document.getElementById("box2").value;
+		 var answer = Number(num1) ** Number(num2);
+		 window.alert("x raise to y is " + answer);
+	   }
+
+	   function remainder() {
+		 var num1 = document.getElementById("box1").value;
+		 var num2 = document.getElementById("box2").value;
+		 var percent = Number(num1) % Number(num2);
+		 window.alert("the remainder of x and y is " + percent);
+	   }
+
+	   function equal() {
+		 var num1 = document.getElementById("box1").value;
+		 var num2 = document.getElementById("box2").value;
+		 var same = Number(num1) == Number(num2);
+		 window.alert(" x is equal to y is " + same);
+	   }
+    </script>
+</body>
+</html>
